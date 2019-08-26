@@ -1,0 +1,279 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); 
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    }
+
+body{
+    font-family: 'NanumSquare', NanumGothic;
+    background-color:#f2f2f2;
+}
+
+#signup_box{
+	width:470px;
+	
+	margin-left:35%;
+	background-color:white;
+	padding:10px;
+	margin-top:20px;
+	margin-bottom:30px;
+	
+	border-radius: 20px;
+	box-shadow: 2px 2px 2px 2px rgb(204,204,204);
+}
+.loginLogo{
+	text-align:center;
+	margin-top:40px;
+	height:60px;
+	margin-bottom:10px;
+}
+/* input{ */
+/* 	border-top:0px;border-left:0px; */
+/* 	border-right:0px; */
+/* 	border-bottom:0px; */
+/* 	color:#8b8b8b; */
+/* 	height:40px;  */
+/* 	width: 280px; */
+/*  	margin-top:40px; */
+/*  	margin-left:105px; */
+/*  	font-size:15px; */
+/* } */
+#name_input{
+	border-top:0px;border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+
+	height:40px; 
+	width: 280px;
+ 	margin-top:40px;
+ 	margin-left:105px;
+ 	font-size:15px;
+}
+#birth_input1{
+	border-top:0px;border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+
+	height:40px; 
+	width: 250px;
+ 	margin-top:40px;
+ 	margin-left:105px;
+ 	font-size:15px;
+}
+input[type="radio"]{
+	width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    border: 2px solid #bcbcbc;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top:40px;
+ 	margin-left:105px;
+}
+#info3 label{
+	color: #8b8b8b;
+	font-size:14.5px;
+}
+#id_input{
+	border-top:0px;border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+	color:#8b8b8b;
+	height:40px; 
+	width: 218px;
+ 	margin-top:40px;
+ 	margin-left:105px;
+ 	font-size:15px;
+}
+.id_text{
+	color:#8b8b8b;
+	height:40px; 
+	width: 280px;
+ 	margin-top:5px;
+ 	margin-left:105px;
+ 	font-size:15px;
+}
+#nn_input{
+	border-top:0px;border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+	color:#8b8b8b;
+	height:40px; 
+	width: 218px;
+ 	margin-top:40px;
+ 	margin-left:105px;
+ 	font-size:13px;
+}
+#pw_input{
+	border-top:0px;border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+	color:#8b8b8b;
+	height:40px; 
+	width: 280px;
+ 	margin-top:40px;
+ 	margin-left:105px;
+ 	font-size:13px;
+}
+#pwi_input{
+	border-top:0px;border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+	color:#8b8b8b;
+	height:40px; 
+	width: 280px;
+ 	margin-top:40px;
+ 	margin-left:105px;
+ 	font-size:13px;
+}
+.pw_text{
+	color:#8b8b8b;
+	height:40px; 
+	width: 280px;
+ 	margin-top:5px;
+ 	margin-left:105px;
+ 	font-size:15px;
+}
+#phone_box{
+	display:inline-block;
+	margin-left:105px;
+	color:#8b8b8b;
+	font-size:15px;
+	margin-top:40px;
+}
+#phone1_input{
+	border:1px solid #bababa;
+	height:20px;
+	margin-left:5px;
+	margin-right:5px;
+}
+#phone2_input{
+	
+	border:1px solid #bababa;
+	width:60px;
+	height:20px;
+	margin-left:5px;
+	margin-right:5px;
+}
+#phone3_input{
+	border:1px solid #bababa;
+	width:60px;
+	height:20px;
+	margin-left:5px;
+	margin-right:5px;
+}
+#address1_input{
+	border-top:0px;border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+	color:#8b8b8b;
+	height:40px; 
+	width: 218px;
+ 	margin-top:40px;
+ 	margin-left:105px;
+ 	font-size:13px;
+}
+#address2_input{
+	border-top:0px;border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+	color:#8b8b8b;
+	height:40px; 
+	width: 280px;
+ 	margin-top:40px;
+ 	margin-left:105px;
+ 	font-size:13px;
+}
+hr{
+    width: 280px;
+    height: 3px;
+    background: #bababa;
+    text-align: center;
+    margin-left: 105px;
+    border: 0;
+}
+#id_doublecheck{
+	width:60px;
+	height:25px;
+	background:#bababa;
+	color:white;
+	border-radius:4px;
+}
+#nn_doublecheck{
+	width:60px;
+	height:25px;
+	background:#bababa;
+	color:white;
+	border-radius:4px;
+}
+#find_address{
+	width:60px;
+	height:25px;
+	background:#bababa;
+	color:white;
+	border-radius:4px;
+}
+.confirmBtnBox{
+	text-align:center;
+	margin-top:50px;
+	margin-bottom: 40px;
+}
+.confirmBtnBox #confirm_btn{
+	width:280px; height: 55px;
+	margin-top: 40px;
+	background-color:#f0552d;
+	display: inline-block;
+	border-radius: 25px;
+	color:white;
+	margin-bottom:40px;
+	
+}
+.confirmBtnBox #confirm_btn #confirm_text{
+	font-size: 17px;
+	font-weight:bold;
+	letter-spacing:3px;
+}
+
+.footer {
+	text-align:center;
+    position:relative;
+    bottom:0;
+    width:490px;
+    height:70px;   
+	margin-left:35%;
+	margin-bottom:40px;
+   
+
+}
+.footer-menu li{
+	text-align:center;
+	display:inline-block;
+	margin:5px;
+	color:#9b9b9b;
+	font-size:13px;
+}
+.footer-con p{
+	font-size:10.5px;
+	color:#9b9b9b;
+	display: inline-block;
+
+    vertical-align: middle;
+}
+.footer-con {
+	display:inline;
+}
+.footer-con img{
+	    margin-top: 5px;
+    margin-right: 5px;
+    
+    vertical-align: bottom;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

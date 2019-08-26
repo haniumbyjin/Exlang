@@ -1,0 +1,305 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); 
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+/*     list-style-type: none; */
+    }
+
+body{
+    font-family: 'NanumSquare', NanumGothic;
+    background: #eef0f3;
+    font-size:14px;
+}
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+#notice_content{
+	flex: 0 0 auto;
+    width: 540px;
+    padding-bottom: 20px;
+    background:#eef0f3;
+}
+.noticeBoard_list{
+	background-color: #fff;
+    margin-bottom: 11px;
+    box-shadow: 0 1px 1px 0 #e5e8ec;
+    position: relative;
+}
+.noticeBoard_list .noticeTitleWriter{
+	position: relative;
+    height: 65px;
+    background-color: transparent;
+    z-index: 11;
+    cursor: pointer;
+    padding-top: 20px;
+    align-items: flex-start;
+    display: flex;
+}
+.noticeBoard_list .noticeTitleWriter .noticeTitleWriter_inner{
+	display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 396px;
+    -ms-flex: 1 1 396px;
+    flex: 1 1 396px;
+    position: relative;
+    margin-right: 72px;
+    margin-left:22px;
+    min-width: 0;
+    padding-top: 2px;
+    white-space: nowrap;
+    color: #999;
+    line-height: 1.4;
+    z-index: 12;
+}
+.noticeBoard_list .noticeTitleWriter .noticeTitleWriter_inner .ellipsis{
+	display: block;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+    word-break: normal;
+    word-wrap: normal;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.noticeBoard_list .noticeTitleWriter .noticeTitleWriter_inner .ellipsis .text{
+	font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 3px;
+}
+.noticeBoard_list .noticeTitleWriter .noticeTitlelist{
+	    padding-top: 2px;
+    font-size: 0;
+    display: block;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+    word-break: normal;
+    word-wrap: normal;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.noticeBoard_list .noticeTitleWriter .noticeTitlelist .time{
+	display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+}
+.noticePost_function{
+	position: absolute;
+    z-index: 20;
+    font-size: 0;
+    text-align: right;
+    right: 0;
+    top: 31px;
+}
+.noticePost_function .btn_menu{
+	position: relative;
+    opacity: .7;
+    width: 15px;
+    height: 28px;
+    overflow: hidden;
+    display: inline-block;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+    background: url(../images/menu.jpg);
+    background-position: -543px -17px;
+    z-index: 12;
+    vertical-align: top;
+    margin-right: 17px;
+    outline:0;
+    cursor: pointer;
+    border:none;
+}
+.noticePostMain{
+	position: relative;
+    display: block;
+}
+.noticePostMain .noticePostBody{
+	padding: 0 22px 17px;
+}
+.noticePostMain .noticePostBody .noticePost_text{
+	    padding-top: 8px;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+.noticePostMain .noticePostBody .noticePost_text p{
+	word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 14px;
+    line-height: 1.43;
+}
+.noticePostMain .noticePostBody .photoRegion{
+	z-index: 1;
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    min-height: 65px;
+    margin: 10px 0 0;
+    text-align: left;
+    font-size: 0;
+}
+.noticePostMain .noticePostBody .photoRegion .photo{
+	overflow: hidden;
+    position: relative;
+    max-width: 496px;
+    border: 0;
+    background: 0 0;
+    font-size: 0;
+    cursor: pointer;
+}
+.noticePostMain .noticePostBody .photoRegion .photo img{
+	text-align:center;
+	max-width:100%;
+    vertical-align: middle;
+}
+.noticePostMain .noticePostBody .noticePostCount{
+	overflow: hidden;
+    padding: 15px 0 10px;
+    margin-top: -5px;
+}
+.noticePostMain .noticePostBody .noticePostCount .noticePost_comment{
+	position: relative;
+    float: left;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+}
+.noticePostMain .noticePostBody .noticePostCount .noticePost_comment .comment{
+	display: inline-block;
+    line-height: 23px;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+}
+
+.noticePostMain .noticePostBody .noticePostCount .noticePost_comment button{
+	border: 0;
+    background-color: transparent;
+    border-radius: 0;
+    cursor: pointer;
+	
+}
+..noticePostMain .noticePostBody{
+	
+}
+.commentBox .reply_view{
+	position: relative;
+    text-align: left;
+    font-size: 0;
+    position: relative;
+    background: #fcfcfc;
+}
+.commentBox .reply_view .write{
+	min-height: 67px;
+    padding: 14px 45px 14px 45px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.commentBox .reply_view .write #commentlist .commentArea .writerInfo .reply_name{
+	
+    flex: none;
+    padding-right: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+    word-break: normal;
+    word-wrap: normal;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.commentBox .reply_view .write #commentlist .commentArea .commentBody .reply_txt{
+	    padding-top: 1px;
+    white-space: pre-wrap;
+    color: #222;
+    font-size: 13px;
+    line-height: 1.4;
+    display: inline;
+    word-break:break-all;
+}
+.commentBox .reply_view .write #commentlist .commentArea .commentBody .cRegDate{
+    position: relative;
+    display: inline-block;
+    line-height: 15px;
+    vertical-align: top;
+    font-size: 12px;
+    font-weight: 400;
+    color: #777;
+    float: right;
+}
+
+.comment_input{
+	    position: relative;
+    border-top: 1px solid #f0f0f0;
+}
+.comment_input .commentInputLayout .input-group{
+	position: relative;
+    display: flex;
+    align-items: start;
+    min-height: 35px;
+    padding: 12px 0 12px 12px;
+    background-color: #fff;
+}
+.comment_input .commentInputLayout .input-group .writeWrap{
+	
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    border-radius: 18px;
+    border: 1px solid #dedede;
+}
+.comment_input .commentInputLayout .input-group .writeWrap .form-control{
+	
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    border-radius: 18px;
+    font-size: 14px;
+    border: 1px solid #dedede;
+    height: 33px;
+}
+.comment_input .commentInputLayout .input-group .submitBtn{
+	position: relative;
+    margin: 0 10px 0 8px;
+}
+.comment_input .commentInputLayout .input-group .submitBtn .commentBtn{
+	min-width: 64px;
+    height: 35px;
+    padding: 0 15px;
+    
+    background: #d9d9d9;
+    border-radius: 18px;
+}
+.comment_input .commentInputLayout .input-group .submitBtn button{
+	color: #474e60;
+	outline:0;
+	border:none;
+}
+/* post button modal */
+.modalLayer_npost{display:none; position:relative;}
+.modalLayer_npost #modalContent_npost{
+	width:auto; height:auto; 
+	padding:20px; border:1px solid #ccc; 
+	position:relative; 
+/* 	left:60%; top:10%;  */
+	z-index:9999; background:#fff;
+	border-radius:5px;
+	left: -8%;
+    top: -44px;
+	}
+.modalLayer_npost #modalContent_npost a{ 
+	color:black;
+	text-decoration:none;
+	font-size:14px;
+	margin:3px;}

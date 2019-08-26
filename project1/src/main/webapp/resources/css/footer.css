@@ -1,0 +1,44 @@
+.footer {
+    clear: both;
+    position: relative;
+    margin:0 auto;
+    background: #34373b;
+    line-height: 175%;
+    margin-top: 200px;
+
+}
+.flex{
+    display:flex;
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+  
+}
+.flex > li{
+    margin: 10px 10px 0px 50px;
+    
+}
+.flex > li> a{
+    color:#f5fff6;
+    font-size: 12px;
+}
+.yellow{
+    color:#fff545;   
+}
+
+.address {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    color:#f5fff6;
+    background: #34373b;
+    font-size: 13px;
+}
+.footer_logo {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.add_text {
+    padding: 5px;
+}

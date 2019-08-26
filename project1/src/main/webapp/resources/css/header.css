@@ -1,0 +1,36 @@
+.header img {
+    height: 70px;
+}
+.logo {
+        float: left;
+        margin: 6px 0 0 40px;
+    }    
+.navi ul li {
+        list-style-type: none;
+        float:left;
+       margin: 35px 30px;;
+/*     margin-right: 15px;*/
+        display:inline-block;   
+     }
+            
+    .navi ul li a{
+     color:black;
+     font-size: 20px;
+    }
+    .login {
+       margin:35px; 50px 0 0;
+       float: right;
+    }
+    
+    .navi2-login>li {
+        display: inline-block;
+        }
+
+    .navi2-login>li>a {
+        font-size: 18px;
+        color:#666666;
+        text-decoration: none; 
+        }
+       .navi ul {
+/*         display: inline-block; */
+        }

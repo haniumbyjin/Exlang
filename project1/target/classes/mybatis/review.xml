@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="review">
+
+<!-- <sql id="search"> -->
+<!-- 		<where> -->
+			<!-- <![CDATA[]]> --> 
+<!-- 		<choose> -->
+<!-- 		<when test="pager.search =='all'"> -->
+<!-- 		 review_title like CONCAT(CONCAT('%',#{pager.keyword}),'%') or review_context like CONCAT(CONCAT('%',#{pager.keyword}),'%')	 -->
+<!-- 		</when> -->
+		
+<!-- 		<when test="pager.keyword !='' and pager.keyword != null and pager.search != 'all'">  키워드앞에 #안붙음 -->
+<!-- 		${pager.search} LIKE CONCAT(CONCAT('%',#{pager.keyword}),'%') xml파일에서는 %인식불가 CDATA를 통해서 문자로 만들어줌 그걸 concat으로 이어붙임  -->
+<!-- 		</when> #는 값으로 가져다 붙이는거 , $는 문자열로 가져다 붙이는거,$를 쓰면 해킹당할수도있음 -->
+<!-- 		<otherwise> -->
+		
+<!-- 		</otherwise> -->
+<!-- 		</choose> -->
+<!-- 		</where> -->
+<!-- 	</sql> -->
+	
+<!-- 	<select id="total" resultType="Integer"> -->
+<!-- 	SELECT COUNT(*) FROM review -->
+<!-- 	<include refid="search"></include> -->
+<!-- 	</select> -->
+
+<!-- 	<select id="todayTotal" resultType="Integer"> -->
+<!-- 	SELECT count(*) FROM review  -->
+<!-- 	WHERE 	<choose> -->
+<!-- 		<when test="pager.search =='all'"> -->
+<!-- 		 review_title like CONCAT(CONCAT('%',#{pager.keyword}),'%') or review_context like CONCAT(CONCAT('%',#{pager.keyword}),'%')	AND -->
+<!-- 		</when> -->
+		
+<!-- 		<when test="pager.keyword !='' and pager.keyword != null and pager.search != 'all'">  키워드앞에 #안붙음 -->
+<!-- 		${pager.search} LIKE CONCAT(CONCAT('%',#{pager.keyword}),'%') AND xml파일에서는 %인식불가 CDATA를 통해서 문자로 만들어줌 그걸 concat으로 이어붙임  -->
+<!-- 		</when> #는 값으로 가져다 붙이는거 , $는 문자열로 가져다 붙이는거,$를 쓰면 해킹당할수도있음 -->
+<!-- 		<otherwise> -->
+		
+<!-- 		</otherwise> -->
+<!-- 		</choose>reg_date > CURRENT_DATE( ); -->
+<!-- 	</select> -->
+
+
+	<update id="incRef">
+		UPDATE review SET ref=ref+1 where review_code=#{reviewCode}
+	</update>
+	
+	<select id="list" resultType="review">
+		SELECT * FROM  review where m_code=#{mCode} ORDER BY review_code DESC
+	</select>
+	<select id="item" resultType="Review">
+		SELECT * FROM review WHERE review_code=#{reviewCode}
+	</select>
+	<delete id="delete">
+		DELETE FROM review WHERE review_code=#{reviewCode}
+	</delete>
+	<insert id="add" parameterType="Review">
+		INSERT INTO review (id,review_title,review_context,reg_date,up_filename, m_code)
+		VALUES (#{id},#{reviewTitle},#{reviewContext},NOW(),#{upFilename}, #{mCode})
+	</insert>
+	
+<!-- 	<update id="update"> -->
+<!-- 		UPDATE review -->
+<!-- 		SET review_title=#{reviewTitle}, review_context=#{reviewContext}, up_filename=#{upFilename} -->
+<!-- 		WHERE review_code=#{reviewCode} -->
+<!-- 	</update> -->
+<!-- 	<select id="countComment" resultType="Integer"> -->
+<!-- 	SELECT COUNT(*) AS totalcomment FROM review_comment ac , review a WHERE a.review_code= ac.review_code AND ac.review_code = #{reviewCode} -->
+<!-- 	</select> -->
+<!-- 	<update id="incRecommend"> -->
+<!-- 			원래 주석부분 UPDATE free_board SET recommend=recommend+1 WHERE free_code=#{freeCode} --> 
+<!-- 			UPDATE review SET recommend=recommend+1 WHERE review_code=#{reviewCode} -->
+<!-- 	 </update> -->
+
+<!-- 	<insert id="checkRecommend"> -->
+<!-- 		INSERT INTO nrecommend VALUES(#{reviewCode},#{id}) -->
+<!-- 	</insert> -->
+	
+<!-- 		<select id="countRecommend" resultType="Integer"> -->
+<!-- 	SELECT COUNT(*) FROM nrecommend WHERE id=#{id} and review_code=#{reviewCode} -->
+<!-- 	</select> -->
+</mapper>

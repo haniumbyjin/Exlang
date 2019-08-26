@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+	
+	<typeAliases>
+		<typeAlias type="kr.ac.kopo.model.User" alias="User" />
+		<typeAlias type="kr.ac.kopo.model.Notice" alias="Notice" />
+		<typeAlias type="kr.ac.kopo.model.Meeting" alias="Meeting" />
+		<typeAlias type="kr.ac.kopo.model.MeetingMember" alias="MeetingMember" />
+		<typeAlias type="kr.ac.kopo.model.Article" alias="Article" />
+		<typeAlias type="kr.ac.kopo.model.Review" alias="Review" />
+		<typeAlias type="kr.ac.kopo.model.Calendar" alias="Calendar" />
+		<typeAlias type="kr.ac.kopo.model.ACommentVO" alias="ACommentVO" />
+		<typeAlias type="kr.ac.kopo.model.NCommentVO" alias="NCommentVO" />
+		<typeAlias type="kr.ac.kopo.model.RCommentVO" alias="RCommentVO" />
+		<typeAlias type="kr.ac.kopo.model.MyPage" alias="MyPage" />
+		
+	</typeAliases>
+	<mappers>
+		<mapper resource="mybatis/user.xml" />
+		<mapper resource="mybatis/mypage.xml" />
+		<mapper resource="mybatis/article.xml" />
+		<mapper resource="mybatis/articlecomment.xml" />
+		<mapper resource="mybatis/notice.xml" />
+		<mapper resource="mybatis/noticecomment.xml" />
+		<mapper resource="mybatis/review.xml" />
+		<mapper resource="mybatis/reviewcomment.xml" />
+		<mapper resource="mybatis/meeting.xml" />
+		<mapper resource="mybatis/meetingmember.xml" />
+		<mapper resource="mybatis/calendar.xml" />
+	</mappers>
+</configuration>

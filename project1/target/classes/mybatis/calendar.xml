@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="calendar">
+
+	<insert id="add"> <!--parameterType="Calendar">-->
+	INSERT INTO calendar (m_id,cal_plan,start_date,end_date,m_code, m_name) <!-- auto increment가 되어있어서 cal_num불필요 -->
+	VALUES (#{mId},#{calPlan},#{startDate},date(#{endDate}),#{mCode}, #{mName})
+	</insert>
+	<insert id="padd"> <!--parameterType="Calendar">-->
+	INSERT INTO calendar (p_id,cal_plan,start_date,end_date,m_code, m_name) <!-- auto increment가 되어있어서 cal_num불필요 -->
+	VALUES (#{pId},#{calPlan},#{startDate},date(#{endDate}),#{mCode}, #{mName})
+	</insert>
+	<select id="list" resultType="Calendar" >
+<!-- 		SELECT * FROM calendar ORDER BY cal_num -->
+		SELECT cal_num, start_date, date(end_date) AS end_date, cal_plan, m_id, m_code FROM calendar
+		where (m_code=#{mCode})
+	</select>
+	
+	 <select id="perlist" resultType="Calendar"  >
+<!--       SELECT * FROM calendar ORDER BY cal_num -->
+        SELECT cal_num, start_date,  date(end_date) AS end_date, cal_plan, m_id, m_code, m_name, p_id FROM calendar c
+        WHERE (m_code IN (SELECT distinct mm.m_code FROM meeting_member mm where mm.mm_id=#{pId}))
+ 		OR (m_id IS NULL AND p_id=#{pId}) OR (m_id = #{pId})
+        
+
+   </select>
+	
+	<delete id="delete">
+		DELETE FROM calendar WHERE cal_num=#{calNum}
+	</delete>
+	
+	<update id="update" parameterType="Calendar">
+		UPDATE calendar
+		SET	cal_plan=#{calPlan}
+		WHERE cal_num=#{calNum}
+	</update>
+	
+	<update id="update1" parameterType="Calendar">
+		UPDATE calendar
+		SET	end_date=date_format(#{endDate}, '%Y-%m-%d'), start_date=date_format(#{startDate}, '%Y-%m-%d')
+<!--  		, start_date=STR_TO_DATE('#{startDate}','%Y-%m-%d'), end_date=STR_TO_DATE('#{endDate}','%Y-%m-%d') -->
+		WHERE cal_num=#{calNum}
+	</update>
+
+
+</mapper>

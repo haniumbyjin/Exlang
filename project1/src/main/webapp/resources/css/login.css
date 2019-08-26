@@ -1,0 +1,72 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); 
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    }
+
+body{
+    font-family: 'NanumSquare', NanumGothic;
+}
+/*로그인 모달*/
+.modalLayer_login{display:none; position:relative;}
+.modalLayer_login .modalContent_login{
+	width:468px; height:518px; 
+	 border:1px solid #ccc; position:fixed; 
+	 left:50%; top:50%; z-index:9999; 
+	 background:#fff;
+	 border-radius:10px;
+	 text-align: center;
+	 }
+.modalLayer_login .modalContent_login .loginLogo{
+	margin-top: 40px; margin-bottom:10px;
+}
+.modalLayer_login .modalContent_login .logininput{
+	
+}
+.modalLayer_login .modalContent_login input{
+		 border-top:0px;border-left:0px;
+		 border-right:0px;
+		 border-bottom:2px solid #bababa;
+	height:40px; width: 280px;
+ 	margin-top:40px;
+ 	font-size:15px;
+ 	
+ 	
+}
+.modalLayer_login .modalContent_login .login_btn{
+	width:280px; height: 55px;
+	margin-top: 40px;
+	background-color:#f0552d;
+	display: inline-block;
+	border-radius: 25px;
+	
+}
+.modalLayer_login .modalContent_login .login_btn .btn_text{
+	text-align:center;
+	margin:17px;
+	font-size:17px; 
+	color:white;
+}
+.modalLayer_login .modalContent_login .signup_btn {
+/* 	width:280px; height: 55px; */
+	padding-top: 15px;
+	margin-top: 40px;
+	
+
+/* 	diplay:inline-block; */
+	text-align:center;
+
+	
+}
+.modalLayer_login .modalContent_login .signup_btn .sign_up{
+	text-align:center; vertical-align:middle; 
+	color:#8b8b8b;
+		text-decoration:none;
+} 
+.modalLayer_login .modalContent_login .signup_btn .sign_up a{
+	font-size:13px;
+	color:#8b8b8b;
+		text-decoration:none;
+}

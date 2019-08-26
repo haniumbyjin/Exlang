@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="meeting">
+
+	<sql id="search">
+		<where>
+			<!-- <![CDATA[]]> -->
+			<choose>
+				<when test="pager.search =='all'">
+					m_name like CONCAT(CONCAT('%',#{pager.keyword}),'%') or m_category like
+					CONCAT(CONCAT('%',#{pager.keyword}),'%') or m_id like CONCAT(CONCAT('%',#{pager.keyword}),'%')
+				</when>
+
+				<when
+					test="pager.keyword !='' and pager.keyword != null and pager.search != 'all'"> <!-- 키워드앞에 #안붙음 -->
+					${pager.search} LIKE CONCAT(CONCAT('%',#{pager.keyword}),'%') <!-- xml파일에서는 
+						%인식불가 CDATA를 통해서 문자로 만들어줌 그걸 concat으로 이어붙임 -->
+				</when> <!-- #는 값으로 가져다 붙이는거 , $는 문자열로 가져다 붙이는거,$를 쓰면 해킹당할수도있음 -->
+				<otherwise>
+
+				</otherwise>
+			</choose>
+		</where>
+	</sql>
+
+
+
+	<select id="list" resultType="Meeting" parameterType="hashmap">
+		SELECT * FROM meeting
+		<include refid="search"></include>
+		<choose>
+			<when test="mCategory !='all' and mCategory !='' and mCategory != null">
+				where m_category=#{mCategory}
+			</when>
+		</choose>
+		ORDER BY m_code DESC
+
+	</select>
+	<select id="item" resultType="Meeting">
+		SELECT * FROM meeting WHERE
+		m_code=#{mCode}
+	</select>
+
+	<insert id="add" parameterType="Meeting">
+		INSERT INTO meeting (m_id,m_name,m_code,m_intro, m_category, m_location, m_filename)
+		VALUES (#{mId},#{mName},#{mCode},#{mIntro},#{mCategory},#{mLocation},
+		#{mFilename})
+
+	</insert>
+	<select id="countMember" resultType="Integer">
+		SELECT COUNT(*)+1 as total
+		FROM meeting m, meeting_member mm WHERE mm.m_code=m.m_code AND
+		mm.m_code=#{mCode}
+	</select>
+	<select id="nitem" resultType="Notice">
+		SELECT * FROM notice WHERE
+		m_code=#{mCode} ORDER BY notice_code DESC
+	</select>
+
+	<select id="aitem" resultType="Article">
+		SELECT *, (SELECT COUNT(*) FROM article_comment ac WHERE ac.article_code=a.article_code) AS totalcomment FROM Article a 
+		WHERE m_code=#{mCode} ORDER BY article_code DESC
+	</select>
+	<select id="ritem" resultType="Review">
+		SELECT * FROM review
+		WHERE m_code=#{mCode} ORDER BY review_code DESC
+	</select>
+	<select id="acitem" resultType="ACommentVO">
+		SELECT * FROM article_comment WHERE
+		m_code=#{mCode} 
+	</select>
+		<select id="citem" resultType="Calendar">
+<!-- 		SELECT * FROM calendar ORDER BY cal_num -->
+		SELECT cal_num,start_date,  date(end_date) AS end_date, cal_plan, m_id FROM calendar
+		WHERE m_code=#{mCode}
+		
+	</select>
+	<select id="checkmember" resultType="hashmap">
+		SELECT mm.mm_id FROM meeting m LEFT OUTER JOIN meeting_member mm ON m.m_code = mm.m_code WHERE m.m_code=#{mCode} 
+	</select>
+</mapper>

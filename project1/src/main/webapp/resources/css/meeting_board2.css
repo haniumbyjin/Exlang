@@ -1,0 +1,312 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); 
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    list-style-type: none;
+    }
+
+body{
+    font-family: 'NanumSquare', NanumGothic;
+    background: #f6f4f4;
+}
+html {
+    height: 100%;
+    min-height: 100%;
+}
+.container {
+    display: flex;
+    position: relative;
+    width: 1030px;
+    min-height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+    align-items: flex-start;  
+}
+/*sidebar*/
+#info {
+    width: 255px;
+    margin-right: 18px;
+}
+#info infoInner {
+    width:255px;
+    position: relative;  
+    box-sizing: border-box; 
+    min-height: 300px;
+}
+.fixed {
+    padding-top: 0px;
+    position: fixed;
+/*    margin: 25px 0 0 445px;*/
+    width: 255px;
+    height: auto;
+    border: 1px solid #cccccc;
+    transform: translateY(110px);
+    left: 445px;
+    top: -10px;
+    background:#fff;
+    
+}
+.cover {
+    display: block;
+    width:218px;
+    height: 100%;
+    margin: 14px 20px;
+}
+.cover_img {
+    width: 218px;
+    height: 190px;
+}
+.cover_img img{
+    width: 215px;
+    height: 180px;
+    border-radius: 3px;
+}
+.cover_name{
+    width: 218px;
+    margin: 10px 0 0 0;
+    font-size: 21px;
+    font-weight: 800;
+    text-align: left;
+    text-indent: 2px;
+    height: auto;
+    overflow:hidden;
+    word-wrap:break-word;
+}
+
+.member img {
+    width: 10px;
+    height: 10px;
+}
+.member p {
+   margin: 20px 0 0 0;
+    font-size: 13px;
+}
+/*게시글,공지,후기글 쓰기*/
+.navi_cover {
+    top:405px;
+    padding: 7px 10px 7px 12px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    width: 235px;
+    left: 446px;
+}
+.hover a:hover{
+    background-color:#fae6d8;
+}
+.navi_item {
+    display: block;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+}
+/*공지*/
+.community {
+    top:100px;
+    padding: 7px 10px 7px 12px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    width: 235px;
+    height: auto;
+    right: 235px;    
+}
+.notice {
+    font-size: 21px;
+}
+.notice img {
+    margin: 0 0 -7px 130px;
+}
+.community li {
+   list-style-type: disc;
+    margin-top: 10px;
+    width: 230px;
+    height: 55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.review {
+    top:290px;
+    padding: 7px 10px 7px 12px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    width: 235px;
+    height: auto;
+    right: 235px;    
+}
+.review_write {
+    font-size: 21px;
+}
+.review_write img {
+    margin: 0 0 -7px 130px;
+}
+.review_write li {
+   list-style-type: disc;
+    margin-top: 10px;
+    width: 230px;
+    height: 55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*게시판 시작*/
+.board {
+    display: block;
+/*    margin-bottom: 20px;*/
+    border: 1px solid #ccc;
+}
+.board_list {
+    position: relative;
+    height: auto;
+    width:600px;
+    z-index: 11;
+    padding: 20px 30px 0 30px;
+    align-items: flex-start;
+    background: #fff;
+}  
+/*모임 이름&날짜 부분*/
+.titleWriter {
+    display: block;
+    position: relative;
+    margin-right: 72px;
+    white-space: nowrap;
+    color: #999;
+    line-height: 1.4;
+    z-index: 12;   
+}
+.ellipsis {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;   
+}
+.text {
+   font-size: 21px;
+    font-weight: 700;
+    color: black;
+}
+.titlelist {
+    padding-top: 2px;
+    display: block;
+}
+.time {
+     display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    color: #999;   
+}
+/*게시글 본문글*/
+.postMain {
+    position: relative;
+    display: block;
+}
+.post_text {
+    padding-top: 8px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+.textbody {
+    word-wrap: break-word;
+    font-size: 13px;
+    line-height: 1.5;
+    text-overflow: ellipsis;  
+}
+/*게시글 사진*/
+.photo img{
+    width: 600px;
+    top: 0;
+    left: 0;
+    border: 1px solid #ccc;
+}
+.photoRegion {
+    margin-top:20px
+}
+.postCount{
+    overflow: hidden;
+    padding: 15px 22px 10px 0;
+    margin-top: -17px;
+}
+/*댓글 수*/
+.post_comment {
+    margin-top:15px;
+}
+.comment {
+    display: inline-block;
+    line-height: 23px;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 400;
+    color: black;
+    border: none;
+    background:#fff;
+    cursor: pointer;
+    outline: 0;
+}
+/*댓글 창*/
+.reply {
+    position: relative;
+    background: #fcfcfc;   
+}
+.reply_view {
+    min-height: 50px;
+    padding: 0 40px 14px 23px;
+    border-top: 1px solid #ccc;
+}
+.write {
+    margin-top: 10px;
+}
+/*댓글 쓴 사람*/
+.reply_name {
+    display: inline-block;
+    line-height: 23px;
+    vertical-align: top;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    border: none;
+    background:#fff;
+    outline: 0;
+}
+/*댓글*/
+.reply_txt {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+/*댓글 날짜*/
+.reply_time {
+  display: block;
+    color: #777;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.post_function {
+    right: 0;
+    top: 31px;
+    position: absolute;
+    z-index: 20;
+    text-align: right;
+}
+.btn_menu {
+    margin-right: 17px;
+    position: relative;
+    width: 15px;
+    height: 28px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+    background-image: url(../images/menu.jpg);
+/*    background-position: -468px -513px;*/
+    z-index: 12;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+}

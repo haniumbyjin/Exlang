@@ -1,0 +1,261 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); 
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    list-style-type: none;
+    }
+
+body{
+    font-family: 'NanumSquare', NanumGothic;
+    background: #eef0f3;
+}
+html {
+    height: 100%;
+    min-height: 100%;
+}
+.container{
+	display: flex;
+    position: relative;
+    width: 975px;
+    /* min-height: 100%; */
+    margin-left: 23%;
+    padding: 70px 0 0;
+    align-items: flex-start;
+    min-height: calc(100% - 70px);
+    margin-top: 100px;
+    padding-top: 0;
+}
+#info{
+	z-index:30;
+	width: 200px;
+    padding-bottom: 20px;
+    margin-right: 24px;
+}
+.sidebar{
+	position: fixed;
+	padding-top: 0px;
+    padding-bottom: 1px;
+    position: fixed;
+    
+    width: 200px;
+}
+ .sidebar .navi_item{
+	width: 100%;
+    padding: 0;
+    position: relative;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: #fff;
+    line-height: 1;
+    border-radius: 1px;
+    position: relative;
+    vertical-align: top;
+    white-space: nowrap;
+/*     font-weight: bold; */
+    font-size: 13px;
+    text-align: left;
+    margin-bottom:5px;
+    padding-left:15px;
+}
+.sidebar .navi_item img{
+	float:right;
+	margin-right:15px;
+}
+.sidebar button:hover{
+	font-weight: bold;
+    
+    background-color: #f0542d;
+    color: white;
+    font-size: 13px;
+}
+#content{
+	flex: 0 0 auto;
+    width: 600px;
+    height:auto;
+    
+}
+.main{
+	width: 600px;
+	background-color:#fff;
+	flex: 0 0 auto;
+   	
+    box-shadow: 0 1px 1px 0 #e5e8ec;
+    position: relative;
+    min-height:550px;
+}
+/*myinfo*/
+#content .main .myinfoBox{
+	width:600px;
+	height:630px;
+	
+}
+.myinfoBox .info_title{
+	width: 570px;
+    margin-left: 30px;
+    height: 50px;
+    padding-top: 10px;
+    display: inline-flex;
+}
+.myinfoBox .info_title p{
+	margin-right: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 70px;
+}
+
+.myinfoBox .info_title hr{
+	width: 470px;
+    background: #cccccc;
+    height: 2px;
+    border: none;
+    vertical-align: middle;
+    margin: 0;
+    margin-top: 6px;
+}
+.myinfoBox .profile{
+	width: 540px;
+	height: 565px;
+	margin-left:30px;
+/* 	margin-top:30px; */
+}
+.myinfoBox .profile p{
+	color:#565656;
+	font-size: 13px;
+	width:70px;
+	display: inline-block;
+}
+.myinfoBox .profile .uName{
+	width: 540px;
+	height: 80px;
+	margin-bottom:10px;
+}
+
+.myinfoBox .profile .uId{
+	width: 540px;
+	height: 80px;
+	margin-bottom:10px;
+}
+
+.myinfoBox .profile .uNick{
+	width: 540px;
+	height: 80px;
+	margin-bottom:10px;
+}
+.myinfoBox .profile .uNick #nickupdate{
+	width:100px;
+	height:30px;
+	border:1px solid #cccccc;
+	padding-left:10px;
+}
+.myinfoBox .profile .uNick button{
+	float:right;
+	width:40px;
+	height:30px;
+	background:url("../images/updateBtn.png") no-repeat;
+	border:none;
+	cursor:pointer;
+	margin-top: 3px;
+}
+.myinfoBox .profile .uBirth{
+	width: 540px;
+	height: 80px;
+	margin-bottom:10px;
+}
+
+.myinfoBox .profile .uPhone{
+	width: 540px;
+	height: 80px;
+	margin-bottom:10px;
+}
+.myinfoBox .profile .uPhone #phone1_update{
+	width:100px;
+	height:30px;
+	border:1px solid #cccccc;
+	padding-left:10px;
+	
+}
+.myinfoBox .profile .uPhone input{
+	width:100px;
+	height:30px;
+	border:1px solid #cccccc;
+	padding-left:10px;
+}
+.myinfoBox .profile .uPhone button{
+	float:right;
+	width:40px;
+	height:30px;
+	background:url("../images/updateBtn.png") no-repeat;
+	border:none;
+	cursor:pointer;
+	margin-top: 3px;
+}
+.myinfoBox .profile .uPw{
+	width: 540px;
+	height: 80px;
+	margin-bottom:10px;
+}
+.myinfoBox .profile .uPw #pw_update{
+	width:100px;
+	height:30px;
+	border:1px solid #cccccc;
+	padding-left:10px;
+}
+.myinfoBox .profile .uPw button{
+	float:right;
+	width:40px;
+	height:30px;
+	background:url("../images/updateBtn.png") no-repeat;
+	border:none;
+	cursor:pointer;
+	margin-top: 3px;
+}
+
+
+
+/*mymeeting*/
+#modalLayer1{display:none; position:relative;}
+#modalLayer1 .modalContent1{
+	width:auto; height:auto;
+	position:absolute; 
+	box-shadow: 0 1px 1px 0 #e5e8ec;
+	z-index:9999; background:#fff;
+	top: -630px;
+    left: 0px;
+
+	}
+#modalLayer1 .modalContent1 button{ 
+	right:0; top:0; cursor:pointer;
+	}
+/*myarticle*/
+#modalLayer2{display:none; position:relative;}
+#modalLayer2 .modalContent2{
+	width:auto; height:auto;  
+	 position:absolute; 
+	left:30%; top:10%; z-index:9999; background:#fff;
+	top: -630px;
+    left: 0px;
+	}
+#modalLayer2 .modalContent2 button{ 
+	right:0; top:0; cursor:pointer;
+	}
+/*mymeeting*/
+#modalLayer3{display:none; position:relative;}
+#modalLayer3 .modalContent3{
+	width:auto; height:auto;  
+	position:absolute; 
+	left:30%; top:10%; z-index:9999; background:#fff;
+	top: -630px;
+    left: 0px;
+	}
+#modalLayer3 .modalContent3 button{ 
+	right:0; top:0; cursor:pointer;
+	}
+iframe{
+	   
+    overflow-x: hidden;
+	height:80vh;
+}	
+

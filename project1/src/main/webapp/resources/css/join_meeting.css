@@ -1,0 +1,341 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); 
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    list-style-type: none;
+    }
+
+body{
+    font-family: 'NanumSquare', NanumGothic;
+}
+
+/*HOME > 모임 만들기*/
+.home {
+    margin:50px 0 0 200px;;
+}
+.home li {
+    display: inline-block;
+}
+.home li a {
+    color:#666666;
+}
+.nav_next {
+    float: right;
+    margin-top: -1px;
+    margin-left: 9px;
+}
+.meeting_join{
+    position: relative;
+    width: 1010px;
+    height: 1270px;
+    margin: 0 auto 0;
+    background: #fff;
+}
+.join h1 {
+    font-size: 45px;
+    font-weight: 700px;
+    margin: 50px 0 0 0;
+}
+
+/*카테고리*/
+.category_box {
+    margin:50px;
+    position: relative;
+      
+    
+    z-index: 1;
+    
+}
+.category_logo{
+	text-align:center;
+	
+}
+.category_logo img{
+	border-radius:5px;
+	box-shadow: 1px 1px 1px 1px rgb(204,204,204);
+	position:relative;
+}
+.category_logo .all{
+	position: absolute;
+    top: 36%;
+    left: 50%;
+    text-decoration: none;
+    color: white;
+    
+}
+.category_logo .notall{
+position: absolute;
+    top: 36%;
+    left: 52%;
+    text-decoration: none;
+    color: white;
+}
+.search_box {
+    width: 990px;
+    height: 70px;
+    
+    border: solid 1px #c2c2c2;
+    margin: 20px 0 0 0;
+    background: #f8f8f8;
+}
+.search{
+	text-align:center;
+	
+}
+.search_input{
+	width:280px;
+	height:40px;
+	border: 2px solid #bcbcbc;
+	margin-top: 14px;
+	
+}
+/*검색 버튼*/
+.btn_type {
+    width: 90px;
+    height: 36px;
+    font-size: 20px;
+    background:black;
+    color: #fff;
+    margin-left:20px;
+    display: inline-block;
+    text-align: center;
+}
+/*검색 결과*/
+.result_list li{
+    float: left;
+    padding-right: 12px;
+/*    padding-top: 12px;*/
+}
+.list {
+    border: 1px solid #cccccc;
+    width:237px;
+    height: 350px;
+    margin: 20px 0 0 0;
+    overflow: hidden;
+/*    text-overflow: ellipsis;*/
+}
+.event_list {
+    width: 195px;
+    height:195px;
+    padding: 20px;
+    position:relative;
+   
+}
+
+.img {
+    max-width: 195px;
+    max-height: 195px;
+    /* vertical-align: middle; */
+    /* text-align: center; */
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.event_title {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 20px 0 20px;
+}
+
+
+.title h1 {
+    font-size: 12px;
+    color: black;
+    line-height: 20px;
+   
+}
+.ct_gory {
+   display: inline-block;
+    vertical-align: middle; 
+}
+.mt_name h2 {
+    margin-left: 20px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    color: black;
+    font-size:12px;
+    padding: 5px 0 5px 0;
+    margin-bottom: 6px;
+   
+}
+.mt_name a{
+	 text-decoration: none;
+	 color:black;
+}
+.mt_name {
+    max-width: 215px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ct_gory h2 {
+    margin-left: 20px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    color: #23ac3a;
+    font-size:12px;
+    padding: 5px 0 5px 0
+}
+.ct_gory2 h2 {
+    margin: -25px 0 0 60px; 
+    border: 1px solid #cccccc;
+    text-align: center;
+    color: red;
+    font-size:12px;
+    padding: 5px 0 5px 0;
+}
+.ct_gory {
+    width: 55px;
+}
+.ct_gory2 {
+    width: 130px;
+}
+.date {
+    float: right;
+    margin: -18px 23px 0 0;
+    color: #999999;
+    font-size:12px;
+}
+/*페이지*/
+.pagination {
+    width: 1010px;
+    margin: 0 auto;
+}
+.page {
+    margin: 80px 0 0 404px;
+    
+}
+.page_prev {
+    display: inline-block;
+    vertical-align: middle;
+    border: solid 1px #999999;
+    width: 50px;
+    height: 27px;
+    padding: 8px 7px 0 3px;
+    margin-right: 3px;
+}
+.btn_prev {
+    color: #999999;
+}
+.number {
+    display: inline;
+}
+.page_number {
+    display: inline-block;
+    vertical-align: middle;
+    border: solid 1px #f65327; 
+    width: 28px;
+    height: 28px;
+    padding: 8px 8px 0 8px;
+    color: #f65327;
+    text-align: center;
+    margin-right: 3px;
+}
+.page_next {
+    display: inline-block;
+    vertical-align: middle;
+    border: solid 1px #999999;
+    width: 50px;
+    height: 27px;
+    padding: 8px 0 0 8px;
+}
+.btn_next {
+    color: #999999;
+}
+
+.modalLayer{
+	display:none; position:relative;
+	}
+.modalLayer #modalContent{
+	width:auto; height:auto; 
+	padding:20px; border:1px solid #ccc; 
+	position:fixed; left:50%; top:50%; 
+	z-index:11; background:#fff;
+	 border: 1px solid #ccc;
+	}
+.modalLayer #modalContent button{ 
+	right:0; top:0; cursor:pointer;
+	}
+.newArticle{
+	color:orange;
+	font-weight:bold;
+}
+#modalLayer1{
+	display:none; position:relative;
+	}
+#modalLayer1 .modalContent1{
+	width: 715px;
+    height: 625px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 500px;
+    top: 360px;
+    z-index: 11;
+    background: #fff;
+    border-radius:20px;
+	}
+#modalLayer1 .modalContent1 button{ 
+	right:0; top:0; cursor:pointer;
+	}
+
+
+
+.swiper-slide .inner .pic{
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    diplay:inline-block;
+    
+}
+.swiper-slide .inner .name {
+        margin-top: 14px;
+    vertical-align: middle;
+    font-size: 25px;
+    color: #222222;
+    /* margin-left: 38px; */
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    max-height: 37.52px;
+    text-overflow: ellipsis;
+    line-height: 1.34;
+    word-break: keep-all;
+    word-wrap: break-word;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: center;
+}
+
+
+ .swiper-slide {
+  position: relative;
+    display: flex;
+    width: 80px;
+    height: 150px;
+    vertical-align: top;
+    margin-right: 15px;
+    /* margin-top: 60px; */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-left: 15px;
+}
+.no_content{
+	text-align:center;
+	margin-top:30px;
+}
+
+.no_content .no_conimg{
+	margin-bottom: 20px;
+

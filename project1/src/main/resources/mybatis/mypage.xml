@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mypage">
+
+
+	<select id="getmeeting" resultType="Meeting">
+	SELECT  *, 
+	(select COUNT(*)+1 from meeting_member where m_code in(SELECT m_code FROM meeting_member WHERE mm_id=#{id} ORDER BY mm_id)) AS total 
+	FROM meeting m WHERE m.m_code IN 
+	(SELECT m_code FROM meeting_member WHERE mm_id=#{id} ORDER BY m_code DESC) ;
+	</select>
+<!-- 	<select id="getCalendar" resultType="Calendar"> -->
+<!-- 	SELECT  cal_plan, start_date, end_date FROM calendar WHERE m_code IN  -->
+<!-- 	(SELECT m_code FROM meeting_member WHERE mm_id= #{id} ORDER BY m_code DESC) GROUP BY m_code; -->
+<!-- 	</select> -->
+	<select id="getList" resultType="MyPage">
+		SELECT  m.m_code, m.m_name, m_intro, m.m_id, m_filename, any_value(cal_plan) as cal_plan, any_value(start_date) as start_date, any_value(end_date) as end_date, 
+		(select COUNT(*)+1 from meeting_member mm WHERE m.m_code=mm.m_code) AS total 
+		FROM meeting m	LEFT OUTER JOIN calendar c ON (m.m_code=c.m_code) 
+	WHERE m.m_code IN (SELECT m_code FROM meeting_member WHERE mm_id=#{id} ORDER BY mm_id) 
+	  GROUP BY m.m_code 
+	</select>
+	<select id="item" resultType="User">
+		SELECT * FROM member WHERE id=#{id}
+	</select>
+	<select id="getArticle" resultType="Article">
+	SELECT mm.m_code, article_title, reg_date
+	 FROM article a, meeting_member mm
+	 WHERE a.m_code=mm.m_code AND mm.m_code =#{mCode} AND mm_id=#{id} ORDER BY reg_date DESC LIMIT 4
+	</select>
+	
+	<select id="getReview" resultType="Review">
+	SELECT mm.m_code, review_title, reg_date
+	 FROM review a, meeting_member mm
+	 WHERE a.m_code=mm.m_code AND mm.m_code =#{mCode} AND mm_id=#{id} ORDER BY reg_date DESC LIMIT 4
+	</select>
+	
+	
+	</mapper>
